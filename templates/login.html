@@ -1,0 +1,307 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Employee Record System - Login</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="{% static 'assets/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="{% static 'assets/css/sb-admin-2.min.css' %}" rel="stylesheet">
+
+    <style>
+        /* Body & Main Containers */
+        body {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            min-height: 100vh;
+        }
+        
+        .page-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5px;
+        }
+        
+        /* Header Styling */
+        .system-header {
+            color: white;
+            font-weight: 700;
+            text-align: center;
+            padding-top: 20px;
+            margin-bottom: 30px;
+            font-size: 2rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: fadeInDown 0.8s ease;
+        }
+        
+        /* Card Container */
+        .login-card {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+            background-color: white;
+            margin-bottom: 30px;
+            animation: fadeIn 1s ease;
+        }
+        
+        /* Image Column */
+        .image-column {
+            background-size: cover;
+            background-position: center;
+            min-height: 500px;
+            position: relative;
+        }
+        
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.4);
+        }
+        
+        .image-text {
+            position: absolute;
+            bottom: 50px;
+            left: 0;
+            right: 0;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .image-text h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+        
+        /* Form Container */
+        .form-container {
+            padding: 40px;
+        }
+        
+        .welcome-heading {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .welcome-heading h1 {
+            color: #2c3e50;
+            font-weight: 700;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        
+        .welcome-heading p {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+        
+        /* Form Elements */
+        .input-group {
+            position: relative;
+            margin-bottom: 25px;
+        }
+        
+        .input-icon {
+            position: absolute;
+            left: 15px;
+            top: 12px;
+            color: #3498db;
+            font-size: 1rem;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 12px 15px 12px 45px;
+            border-radius: 30px;
+            border: 1px solid #e0e0e0;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            background-color: #f9fafc;
+        }
+        
+        .form-input:focus {
+            border-color: #3498db;
+            box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+            outline: none;
+        }
+        
+        /* Button Styling */
+        .login-btn {
+            width: 100%;
+            padding: 12px 20px;
+            border-radius: 30px;
+            border: none;
+            background: linear-gradient(to right, #2c3e50, #3498db);
+            color: white;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(44, 62, 80, 0.2);
+        }
+        
+        .login-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(44, 62, 80, 0.3);
+            background: linear-gradient(to right, #3498db, #2c3e50);
+        }
+        
+        /* Divider */
+        .divider {
+            border-top: 1px solid #e0e0e0;
+            margin: 25px 0;
+        }
+        
+        /* Register Link */
+        .register-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .register-link a {
+            color: #3498db;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .register-link a:hover {
+            color: #2c3e50;
+            text-decoration: underline;
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            color: rgba(255,255,255,0.8);
+            font-size: 0.8rem;
+            margin-top: 15px;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes fadeInDown {
+            from { 
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 991px) {
+            .image-column {
+                display: none;
+            }
+            
+            .form-container {
+                padding: 30px;
+            }
+            
+            .system-header {
+                font-size: 1.7rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-container">
+        <h2 class="system-header">
+            <i class="fas fa-building mr-2"></i>Employee Record System
+        </h2>
+        
+        <!-- Outer Row -->
+        <div class="row justify-content-center">
+            <div class="col-xl-10 col-lg-12 col-md-9">
+                <div class="login-card">
+                    <div class="card-body p-0">
+                        <!-- Nested Row within Card Body -->
+                        <div class="row">
+                            <div class="col-lg-6 image-column" style="background-image: url('{% static 'assets/img/195548-OY9OIN-908.jpg' %}');">
+                                <div class="image-overlay"></div>
+                                <div class="image-text">
+                                    <h3>Manage Your Workforce</h3>
+                                    <p>A comprehensive solution for employee management and record keeping</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-container">
+                                    <div class="welcome-heading">
+                                        <i class="fas fa-user-circle mb-4" style="font-size: 3rem; color: #3498db;"></i>
+                                        <h1>Welcome Back</h1>
+                                        <p>Please login to access your dashboard</p>
+                                    </div>
+                                    <form class="user" action="{% url 'doLogin' %}" method="POST">
+                                        {% include 'includes/messages.html' %}
+                                        {% csrf_token %}
+                                        <div class="input-group">
+                                            <i class="input-icon fas fa-user"></i>
+                                            <input type="text" class="form-input" id="username" 
+                                                aria-describedby="emailHelp" placeholder="Enter Username..." 
+                                                name="username">
+                                        </div>
+                                        <div class="input-group">
+                                            <i class="input-icon fas fa-lock"></i>
+                                            <input type="password" class="form-input" id="password" 
+                                                placeholder="Password" name="password">
+                                        </div>
+                                       
+                                        <button class="login-btn" type="submit">
+                                            <i class="fas fa-sign-in-alt mr-2"></i>Login
+                                        </button>
+                                        
+                                        <div class="divider"></div>
+                                    </form>
+                                   
+                                    <div class="register-link">
+                                        <a href="{% url 'empsignup' %}">
+                                            <i class="fas fa-user-plus mr-1"></i>New Employee? Register Here!
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer">
+                    <p>&copy; 2023 Employee Record System | All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="{% static 'assets/vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="{% static 'assets/js/sb-admin-2.min.js' %}"></script>
+</body>
+
+</html>

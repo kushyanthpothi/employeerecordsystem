@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Update Your Experience Details</h1>
+    </div>
+
+    <!-- Content Row -->
+    <div class="row justify-content-center">
+        <div class="col-lg-12">
+            <div class="card shadow rounded-lg mb-4">
+                <div class="card-header py-3 bg-gradient-primary">
+                    <h5 class="m-0 font-weight-bold text-white">Work Experience Information</h5>
+                </div>
+                <div class="card-body">
+                    <form class="user needs-validation" method="post" action="{% url 'update_emp_experience' %}">
+                        {% include 'includes/messages.html' %}
+                        {% csrf_token %}
+                        <input type="hidden" id="employee_id" name="employee_id" value="{{emp_exp.empid.id}}">
+                        
+                        <div class="card mb-4">
+                            <div class="card-header bg-light">
+                                <h6 class="font-weight-bold text-primary mb-0">Experience 1</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="Employer1Name">Employer Name</label>
+                                        <input type="text" class="form-control" id="Employer1Name" name="Employer1Name" value="{{emp_exp.Employer1Name}}">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="Employer1Designation">Designation</label>
+                                        <input type="text" class="form-control" id="Employer1Designation" name="Employer1Designation" value="{{emp_exp.Employer1Designation}}">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="Employer1CTC">CTC</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">$</span>
+                                            </div>
+                                            <input type="text" class="form-control" id="Employer1CTC" name="Employer1CTC" value="{{emp_exp.Employer1CTC}}">
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="Employer1WorkDuration">Work Duration</label>
+                                        <input type="text" class="form-control" id="Employer1WorkDuration" name="Employer1WorkDuration" value="{{emp_exp.Employer1WorkDuration}}">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card mb-4">
+                            <div class="card-header bg-light">
+                                <h6 class="font-weight-bold text-primary mb-0">Experience 2</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="Employer2Name">Employer Name</label>
+                                        <input type="text" class="form-control" id="Employer2Name" name="Employer2Name" value="{{emp_exp.Employer2Name}}">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="Employer2Designation">Designation</label>
+                                        <input type="text" class="form-control" id="Employer2Designation" name="Employer2Designation" value="{{emp_exp.Employer2Designation}}">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="Employer2CTC">CTC</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">$</span>
+                                            </div>
+                                            <input type="text" class="form-control" id="Employer2CTC" name="Employer2CTC" value="{{emp_exp.Employer2CTC}}">
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="Employer2WorkDuration">Work Duration</label>
+                                        <input type="text" class="form-control" id="Employer2WorkDuration" name="Employer2WorkDuration" value="{{emp_exp.Employer2WorkDuration}}">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card mb-4">
+                            <div class="card-header bg-light">
+                                <h6 class="font-weight-bold text-primary mb-0">Experience 3</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="Employer3Name">Employer Name</label>
+                                        <input type="text" class="form-control" id="Employer3Name" name="Employer3Name" value="{{emp_exp.Employer3Name}}">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="Employer3Designation">Designation</label>
+                                        <input type="text" class="form-control" id="Employer3Designation" name="Employer3Designation" value="{{emp_exp.Employer3Designation}}">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="Employer3CTC">CTC</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">$</span>
+                                            </div>
+                                            <input type="text" class="form-control" id="Employer3CTC" name="Employer3CTC" value="{{emp_exp.Employer3CTC}}">
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="Employer3WorkDuration">Work Duration</label>
+                                        <input type="text" class="form-control" id="Employer3WorkDuration" name="Employer3WorkDuration" value="{{emp_exp.Employer3WorkDuration}}">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center">
+                            <button type="submit" name="submit" value="submit" class="btn btn-primary px-5 py-2">
+                                <i class="fas fa-save mr-2"></i>Save Changes
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

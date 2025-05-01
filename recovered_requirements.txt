@@ -1,0 +1,9 @@
+Django
+asgiref
+mysqlclient
+pillow
+pip
+setuptools
+sqlparse
+tzdata
+wheel
