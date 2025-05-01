@@ -170,4 +170,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 📞 Contact
 
-For any queries, please contact [your-email@example.com](mailto:your-email@example.com)
+For any queries, please contact [kushyanthpothineni2003@gmail.com](mailto:kushyanthpothineni2003@gmail.com)
