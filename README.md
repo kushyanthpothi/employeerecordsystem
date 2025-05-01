@@ -39,7 +39,7 @@ The Employee Record System is a comprehensive web-based application developed us
 
 ### Step 1: Clone the Repository
 ```bash
-git clone https://github.com/yourusername/employee-record-system.git
+git clone https://github.com/kushyanthpothi/employeerecordsystem.git
 cd employee-record-system/ers
 ```
 
