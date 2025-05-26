@@ -247,13 +247,16 @@ employeerecordsystem/
 <div align="center">
 
 ### 🔐 Login Interface
-![Login Screen](./media/profile_pic/login.jpg)
+![Login Screen](https://i.ibb.co/7NLynCzB/image.png)
+
+### 👤 User Registration Interface
+![User interface Screen](https://i.ibb.co/m5c40zHV/image.png)
 
 *Modern, responsive login interface with secure authentication*
 
 <!-- Add more screenshots when available -->
 ### 📊 Admin Dashboard
-*Coming soon - Admin panel overview*
+![Admin Dashboard](https://i.ibb.co/Vpv74mLY/Screenshot-2025-05-26-at-9-48-51-AM.png)
 
 ### 👤 Employee Dashboard  
 *Coming soon - Employee self-service portal*
