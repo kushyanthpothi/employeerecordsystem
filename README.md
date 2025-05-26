@@ -256,13 +256,14 @@ employeerecordsystem/
 
 <!-- Add more screenshots when available -->
 ### 📊 Admin Dashboard
-![Admin Dashboard](https://i.ibb.co/Vpv74mLY/Screenshot-2025-05-26-at-9-48-51-AM.png)
+![Admin Dashboard](https://i.ibb.co/NPzqCWL/image.png)
+
 
 ### 👤 Employee Dashboard  
-*Coming soon - Employee self-service portal*
+![Employee Dashboard](https://i.ibb.co/Vpv74mLY/Screenshot-2025-05-26-at-9-48-51-AM.png)
 
 ### 📝 Profile Management
-*Coming soon - Profile editing interface*
+![Profile Dashboard](https://i.ibb.co/Xxx1HzXM/image.png)
 
 </div>
 
